@@ -9,7 +9,7 @@
 
 import random
 from IPython.display import clear_output
-#Note: IPython.display is exclusive for Jupyter Notebook, other users may remove this import
+#Note: IPython.display is exclusive for iPython Notebook environments!
 
 print('Welcome to Tic-Tac-Toe!')
 
@@ -42,7 +42,7 @@ while True:
 
     def display_board(board):
         clear_output()
-        #Note: IPython.display is exclusive for Jupyter Notebook, other users may remove this import
+        #Note: IPython.display is exclusive for iPython Notebook environments!
         print('##############################\n####    Tic -Tac - Toe    ####\n##############################\n')
         print('           ||   ||\n'+'         '+board[1]+' || '+board[2]+' || '+board[3]+'\n           ||   ||')
         print('       ===============\n           ||   ||')
