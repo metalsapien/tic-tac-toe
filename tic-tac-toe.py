@@ -13,6 +13,8 @@ from IPython.display import clear_output
 
 print('Welcome to Tic-Tac-Toe!')
 
+#GAME PLAY
+
 while True:
     new_board = [' ']*10
     player1 = ''
@@ -38,9 +40,8 @@ while True:
     if begin.upper() == 'NO':
         ready = False
      
-    #Displaying the game-board
-
     def display_board(board):
+        ''' Displaying the game-board '''
         clear_output()
         #Note: IPython.display is exclusive for iPython Notebook environments!
         print('##############################\n####    Tic -Tac - Toe    ####\n##############################\n')
@@ -49,23 +50,20 @@ while True:
         print('        '+board[4]+'  || '+board[5]+' || '+board[6]+'\n           ||   ||')
         print('       ===============\n           ||   ||')
         print('        '+board[7]+'  || '+board[8]+' || '+board[9]+'\n           ||   ||')
-        
-    #Taking the mark-position as input from the user
-        
+           
     def player_choice(board):
+        ''' Taking the mark-position as input from the user '''
         position = 0
         while position not in range(1,10) or not space_check(board,position):
             position = int(input('Enter your choice (1-9): '))
         return position
 
-    #Placing the 'X' and 'O' marks in the game-board
-
     def placemarker(board, player_mark, position):
+        ''' Placing X and O marks in the game-board '''
         board[position] = player_mark
         
-    #To determine the winner by matching all the winning patters
-
     def win_check(board, mark):
+        ''' To determine the winner by matching all the winning patters '''
         return((board[1] == board[2] == board[3] == mark)
            or (board[4] == board[5] == board[6] == mark)
            or (board[7] == board[8] == board[9] == mark)
@@ -75,27 +73,29 @@ while True:
            or (board[3] == board[5] == board[7] == mark)
            or (board[3] == board[6] == board[9] == mark))
 
-    #Function to Check whether all the available spaces have already been occupied
-
  	def space_check(board, position):
+        ''' Checking whether a position is already occupied '''
         return board[position] == ' '
     
     def full_board_check(board):
+        ''' Checking whether all the positions have been taken on the game-board '''
         draw = True
         for i in range(1,10):
             if space_check(board,i):
                 draw = False
         return draw
                
-    #To check if the player wants to replay
+    #To check 
 
     def replay():
+        '''  Replay the game '''
         again = input("Type 'Yes' to play again, 'No' to quit: ")
         if again.upper() == 'YES':
             ready = True
         return again.upper() == 'YES'
             
-        
+ #Game-play begins:
+
     while ready:
         #Player 1's turn:
         if turn == '1':
