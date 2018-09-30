@@ -108,7 +108,7 @@ while True:
 
             if win_check(new_board,player1):
                 display_board(new_board)
-                print('\nPlayer 1 has won')
+                print('\nCongratulations! You have won!')
                 break
 
             #Whether it's a draw! 
@@ -133,7 +133,7 @@ while True:
 
             if win_check(new_board,player2):
                 display_board(new_board)
-                print('\nPlayer 2 has won')
+                print('\nPlayer 2 has won!')
                 break
                 
             #Whether it's a draw!
