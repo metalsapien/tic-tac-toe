@@ -47,9 +47,9 @@ while True:
         print('##############################\n####    Tic -Tac - Toe    ####\n##############################\n')
         print('           ||   ||\n'+'         '+board[1]+' || '+board[2]+' || '+board[3]+'\n           ||   ||')
         print('       ===============\n           ||   ||')
-        print('        '+board[4]+'  || '+board[5]+' || '+board[6]+'\n           ||   ||')
+        print('         '+board[4]+' || '+board[5]+' || '+board[6]+'\n           ||   ||')
         print('       ===============\n           ||   ||')
-        print('        '+board[7]+'  || '+board[8]+' || '+board[9]+'\n           ||   ||')
+        print('         '+board[7]+' || '+board[8]+' || '+board[9]+'\n           ||   ||')
            
     def player_choice(board):
         ''' Taking the mark-position as input from the user '''
